@@ -1,74 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ChemTutor+ offers expert online tutoring in Chemistry at all levels plus GCSE Biology, Physics, and Maths. Book via Calendly or email." />
-  <title>ChemTutor+</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4fff4; color: #1b3d1b; }
-    header { background: #2e7d32; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-    nav a { color: white; margin-left: 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h1, h2 { color: #2e7d32; }
-    .subjects, .resources { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .btn { background: #2e7d32; color: white; padding: 10px 16px; border-radius: 6px; display: inline-block; text-decoration: none; }
-    footer { margin-top: 40px; padding: 20px; background: #e8f5e9; text-align: center; font-size: 14px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemTutor Plus - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f0f0;
+            color: #5a5a5a;
+        }
+
+        .header {
+            background-color: #c8e6dc;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid #4a7c59;
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            font-size: 45px;
+            color: #4a7c59;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            color: #4a7c59;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .site-title {
+            font-size: 48px;
+            color: #707070;
+            font-weight: 400;
+            white-space: nowrap;
+            margin-left: 20px;
+            align-self: center;
+            margin-top: 35px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #707070;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 16px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: #4a7c59;
+        }
+
+        nav a.active {
+            border: 2px solid #707070;
+            border-radius: 4px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 50px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #707070;
+            font-weight: 400;
+            margin-bottom: 60px;
+        }
+
+        .founder-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .founder-photo {
+            width: 250px;
+            height: 320px;
+            border-radius: 8px;
+            margin: 0 auto 30px;
+            object-fit: cover;
+        }
+
+        .founder-section h2 {
+            font-size: 36px;
+            color: #8a8a8a;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .founder-description {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #9a9a9a;
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .quote-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #5fb89a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: white;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #7a7a7a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .testimonial-author {
+            text-align: center;
+            color: #8a8a8a;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .highlight-quote {
+            background-color: #c8e6dc;
+            padding: 50px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .highlight-quote p {
+            font-size: 28px;
+            line-height: 1.6;
+            color: #6a6a6a;
+            margin-bottom: 20px;
+        }
+
+        .highlight-quote .author {
+            font-size: 18px;
+            color: #8a8a8a;
+        }
+
+        .rating {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .star {
+            font-size: 32px;
+            color: #ffd700;
+        }
+
+        .star.empty {
+            color: #d0d0d0;
+        }
+
+        .votes {
+            font-size: 14px;
+            color: #8a8a8a;
+            margin-bottom: 30px;
+        }
+
+        .social-share {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .share-btn {
+            padding: 10px 24px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .share-btn:hover {
+            opacity: 0.8;
+        }
+
+        .share-btn.facebook { background-color: #3b5998; }
+        .share-btn.twitter { background-color: #000000; }
+        .share-btn.linkedin { background-color: #0077b5; }
+        .share-btn.whatsapp { background-color: #25d366; }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 50px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            opacity: 0.8;
+        }
+
+        .social-icon.facebook { background-color: #b3c7e6; }
+        .social-icon.twitter { background-color: #c0c0c0; }
+        .social-icon.instagram { background-color: #e6b3c7; }
+        .social-icon.youtube { background-color: #f5b3b3; }
+
+        .copyright {
+            font-size: 14px;
+            color: #8a8a8a;
+        }
+
+        .select-profiles {
+            background-color: #5eb4d9;
+            color: white;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .select-profiles:hover {
+            background-color: #4a9ac4;
+        }
+
+        @media (max-width: 1200px) {
+            .site-title {
+                font-size: 36px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header {
+                padding: 20px 30px;
+            }
+
+            .logo-section {
+                flex: 1 1 100%;
+                justify-content: center;
+            }
+
+            nav {
+                flex: 1 1 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 28px;
+                margin-left: 10px;
+            }
+
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-icon {
+                font-size: 35px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .content {
+                padding: 40px 30px;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-quote p {
+                font-size: 22px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .site-title {
+                font-size: 24px;
+                margin-left: 5px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                border: 3px solid #4a7c59;
+            }
+
+            .logo-icon {
+                font-size: 30px;
+            }
+
+            .logo-text {
+                font-size: 16px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .founder-section h2 {
+                font-size: 28px;
+            }
+
+            .highlight-quote p {
+                font-size: 18px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header class="header">
+        <div class="logo-section">
+            <div class="brand-container">
+                <div class="logo">
+                    <div class="logo-icon">🎓</div>
+                </div>
+                <div class="logo-text">ChemTutor+</div>
+            </div>
+            <h1 class="site-title">Chem Tutor Plus</h1>
+        </div>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about" class="active">ABOUT</a>
+            <a href="#services">OUR SERVICES</a>
+            <a href="#pricing">PRICING</a>
+            <a href="#faqs">FAQS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
 
-<header>
-  <div style="font-size: 22px; font-weight: bold; display:flex; align-items:center; gap:10px;">
-    <img src="logo.png" alt="logo" style="height:40px;"> ChemTutor+
-  </div>
-  <nav>
-    <a href="#subjects">Subjects</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Book</a>
-  </nav>
-</header>
+    <main class="content">
+        <h1>About Us</h1>
 
-<section id="hero">
-  <h1>Expert Online Tutoring via Zoom</h1>
-  <p>Chemistry at all levels + GCSE Biology, Physics & Maths. Personalised sessions, downloadable planners, and flexible booking.</p>
-</section>
+        <section class="founder-section">
+            <img src="headshot.png" alt="Sophie - Founder of ChemTutorPlus" class="founder-photo">
+            <h2>About The Founder</h2>
+        </section>
 
-<section id="subjects">
-  <h2>Subjects Offered</h2>
-  <div class="subjects">
-    <div class="card"><h3>Chemistry (All Levels)</h3><p>GCSE → A‑Level → University</p></div>
-    <div class="card"><h3>Biology (GCSE)</h3><p>Exam prep & foundations</p></div>
-    <div class="card"><h3>Physics (GCSE)</h3><p>Clear explanations & support</p></div>
-    <div class="card"><h3>Maths (GCSE)</h3><p>Skills building & revision</p></div>
-  </div>
-</section>
+        <div class="founder-description">
+            <p>Hi, I'm Sophie, the founder of <em>ChemTutorPlus</em>. I created this tutoring service with one clear goal: to make learning accessible, confidence-building, and genuinely enjoyable for every student. I hold an MChem degree and am currently pursuing a PhD in Chemistry, which allows me to bring both strong subject expertise and real research experience into my teaching.</p>
+            <br><br>
+            <p>Over the years, I've supported students across GCSE, A-level, and Functional Skills courses, helping them break down difficult topics into clear, manageable steps. My approach is calm, structured, and fully tailored to each learner—because everyone learns differently, and the right explanation can change everything.</p>
+            <br><br>
+            <p>Through ChemTutorPlus, I combine my academic background with a passion for helping students grow. Whether you're building core maths skills, tackling tricky chemistry concepts, or preparing for exams, my focus is on clear explanations, steady progress, and building lasting confidence.</p>
+            <br><br>
+            <p>If you're looking for expert, friendly support from a tutor who is genuinely invested in your success, you're in the right place.</p>
+        </div>
 
-<section id="resources">
-  <h2>Free Resources & Planners</h2>
-  <div class="resources">
-    <div class="card"><h3>GCSE Chemistry Planner</h3><a class="btn" href="files/gcse-chemistry-planner.pdf" download>Download</a></div>
-    <div class="card"><h3>A-Level Chemistry Checklist</h3><a class="btn" href="files/a-level-chemistry-checklist.pdf" download>Download</a></div>
-    <div class="card"><h3>Study Timetable Template</h3><a class="btn" href="files/study-timetable-template.pdf" download>Download</a></div>
-  </div>
-</section>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">"Sophie is a warm, friendly individual who can quickly form a rapport with new students and put them at their ease. She is an enthusiastic advocate for STEM subjects and during her gap year, volunteered as a lab technician in a secondary school setting, gaining valuable experience of working with students. During her PhD studies, she has supervised junior team members and has instructed them in various lab techniques and coached them for exams and interviews. Along with Sophie's excellent academic record, her experience makes her an ideal tutor for your child."</p>
+                <p class="testimonial-author">Meryl</p>
+            </div>
 
-<section id="contact">
-  <h2>Book a Session</h2>
-  <p>Choose your preferred method:</p>
-  <a class="btn" href="https://calendly.com/YOUR-LINK" target="_blank">Book via Calendly</a>
-  <br><br>
-  <a class="btn" href="mailto:lesson@chemtutor.plus?subject=Tutoring%20Enquiry">Book via Email</a>
-</section>
+            <div class="testimonial">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">"Sophie has a wealth of knowledge in Chemistry and is passionate about the subject. Her teaching will always be well-informed and well delivered."</p>
+                <p class="testimonial-author">Lou</p>
+            </div>
 
-<footer>
-  © <span id="year"></span> ChemTutor+. All rights reserved.
-</footer>
+            <div class="testimonial">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">"I wholeheartedly recommend Sophie as a science tutor. Her PhD research in heterogeneous catalysis gives her a deep, current grasp of chemistry, and she brings the same clear thinking to GCSE maths, physics, and biology. Patient and perceptive, she pinpoints each student's needs and adapts her explanations until concepts click! She blends subject mastery with exam techniques, using past papers, mark scheme insights, and practical revision tips that turn understanding into confident performance. With this mix of expertise, personalised guidance, and strategic exam coaching, Sophie routinely helps learners to exceed their goals, while enjoying the journey!"</p>
+                <p class="testimonial-author">Thomas</p>
+            </div>
+        </div>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        <div class="highlight-quote">
+            <p>"Sophie is an excellent teacher, is able to match pace of learning, break things down or reword to explain another way, and is always patient and kind!"</p>
+            <p class="author">Maisie</p>
+        </div>
 
+        <div class="rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star empty">★</span>
+            <span class="star empty">★</span>
+        </div>
+        <p class="votes">0 votes</p>
+
+        <div class="social-share">
+            <a href="#" class="share-btn facebook">Share</a>
+            <a href="#" class="share-btn twitter">Share</a>
+            <a href="#" class="share-btn linkedin">Share</a>
+            <a href="#" class="share-btn whatsapp">Share</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook">f</a>
+                <a href="#" class="social-icon twitter">𝕏</a>
+                <a href="#" class="social-icon instagram">📷</a>
+                <a href="#" class="social-icon youtube">▶</a>
+            </div>
+            <p class="copyright">© 2025 ChemTutorPlus</p>
+        </div>
+        <button class="select-profiles">Select profiles</button>
+    </footer>
 </body>
 </html>
