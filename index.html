@@ -726,32 +726,37 @@
 
     <script>
         // Simple page navigation
-        const navLinks = document.querySelectorAll('nav a');
-        const aboutSection = document.getElementById('about');
-        const pricingSection = document.getElementById('pricing');
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const aboutSection = document.getElementById('about');
+            const pricingSection = document.getElementById('pricing');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Remove active class from all links
-                navLinks.forEach(l => l.classList.remove('active'));
-                
-                // Add active class to clicked link
-                link.classList.add('active');
-                
-                // Show/hide sections based on clicked link
-                const href = link.getAttribute('href');
-                if (href === '#pricing') {
-                    aboutSection.style.display = 'none';
-                    pricingSection.style.display = 'block';
-                } else if (href === '#about') {
-                    aboutSection.style.display = 'block';
-                    pricingSection.style.display = 'none';
-                } else {
-                    aboutSection.style.display = 'block';
-                    pricingSection.style.display = 'none';
-                }
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    link.classList.add('active');
+                    
+                    // Show/hide sections based on clicked link
+                    const href = link.getAttribute('href');
+                    if (href === '#pricing') {
+                        aboutSection.style.display = 'none';
+                        pricingSection.style.display = 'block';
+                    } else if (href === '#about') {
+                        aboutSection.style.display = 'block';
+                        pricingSection.style.display = 'none';
+                    } else {
+                        aboutSection.style.display = 'block';
+                        pricingSection.style.display = 'none';
+                    }
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
             });
         });
     </script>
