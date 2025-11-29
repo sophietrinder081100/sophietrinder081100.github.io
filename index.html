@@ -302,6 +302,77 @@
             background-color: #4a9ac4;
         }
 
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .pricing-intro h1 {
+            font-size: 42px;
+            color: #707070;
+            margin-bottom: 20px;
+        }
+
+        .pricing-intro p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #9a9a9a;
+        }
+
+        .subject-section {
+            margin-bottom: 50px;
+        }
+
+        .subject-section h2 {
+            font-size: 32px;
+            color: #707070;
+            margin-bottom: 20px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pricing-table thead {
+            background-color: #5fb89a;
+        }
+
+        .pricing-table th {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .pricing-table tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pricing-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-table td {
+            padding: 18px 20px;
+            color: #9a9a9a;
+            font-size: 16px;
+        }
+
+        .pricing-table tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
         @media (max-width: 1200px) {
             .site-title {
                 font-size: 36px;
@@ -444,7 +515,7 @@
         </nav>
     </header>
 
-    <main class="content">
+    <main class="content" id="about">
         <h1>About Us</h1>
 
         <section class="founder-section">
@@ -503,6 +574,187 @@
             <a href="#" class="share-btn whatsapp">Share</a>
         </div>
     </main>
+
+    <main class="content pricing-container" id="pricing" style="display: none;">
+        <div class="pricing-intro">
+            <h1>Subjects</h1>
+            <p>Behind every service we provide is a dedicated team of professionals, each bringing their unique expertise and enthusiasm to our business.</p>
+        </div>
+
+        <section class="subject-section">
+            <h2>Biology</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>£20.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>A-Level</td>
+                        <td>£25.00/h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="subject-section">
+            <h2>Chemistry</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>£20.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>A-Level</td>
+                        <td>£25.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Undergraduate</td>
+                        <td>£30.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Dissertation Proof Reading – Basic</td>
+                        <td>£10.00 per 1000 words</td>
+                    </tr>
+                    <tr>
+                        <td>Dissertation Proof Reading – Intermediate</td>
+                        <td>£15.00 per 1000 words</td>
+                    </tr>
+                    <tr>
+                        <td>Dissertation Proof Reading – Advanced</td>
+                        <td>£20.00 per 1000 words</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="subject-section">
+            <h2>Maths</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary</td>
+                        <td>£15.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary</td>
+                        <td>£18.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>£20.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Functional Skills – Entry 1-3</td>
+                        <td>£23.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Functional Skills – Level 1 & 2</td>
+                        <td>£27.00/h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="subject-section">
+            <h2>Physics</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>£20.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>A-Level</td>
+                        <td>£25.00/h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="subject-section">
+            <h2>General Science</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary</td>
+                        <td>£15.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary</td>
+                        <td>£18.00/h</td>
+                    </tr>
+                    <tr>
+                        <td>GCSE</td>
+                        <td>£20.00/h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        // Simple page navigation
+        const navLinks = document.querySelectorAll('nav a');
+        const aboutSection = document.getElementById('about');
+        const pricingSection = document.getElementById('pricing');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show/hide sections based on clicked link
+                const href = link.getAttribute('href');
+                if (href === '#pricing') {
+                    aboutSection.style.display = 'none';
+                    pricingSection.style.display = 'block';
+                } else if (href === '#about') {
+                    aboutSection.style.display = 'block';
+                    pricingSection.style.display = 'none';
+                } else {
+                    aboutSection.style.display = 'block';
+                    pricingSection.style.display = 'none';
+                }
+            });
+        });
+    </script>
 
     <footer class="footer">
         <div>
