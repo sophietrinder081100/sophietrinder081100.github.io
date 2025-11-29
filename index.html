@@ -17,19 +17,27 @@
             color: #5a5a5a;
         }
 
+        /* --- UPDATED HEADER CSS STARTS HERE --- */
         .header {
             background-color: #c8e6dc;
             padding: 30px 50px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column; /* Stacks the logo area and nav area vertically */
+            align-items: center;    /* Centers items horizontally */
+            justify-content: center;
+            gap: 25px;              /* Adds space between logo/title and the menu */
+        }
+
+        .header-top, .header-nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .logo-section {
             display: flex;
-            align-items: flex-start;
+            align-items: center;     /* Changed from flex-start to center for better vertical alignment */
+            justify-content: center; /* Centers the logo and text relative to each other */
             gap: 20px;
             flex-wrap: wrap;
         }
@@ -81,8 +89,8 @@
             font-weight: 400;
             white-space: nowrap;
             margin-left: 20px;
-            align-self: center;
-            margin-top: 35px;
+            /* margin-top removed to align better with logo center */
+            margin-top: 0; 
         }
 
         nav {
@@ -90,7 +98,9 @@
             gap: 30px;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: center; /* Centers the actual links */
         }
+        /* --- UPDATED HEADER CSS ENDS HERE --- */
 
         nav a {
             color: #707070;
@@ -125,6 +135,7 @@
             text-align: center;
             margin-left: auto;
             margin-right: auto;
+            width: 100%;
         }
 
         h1 {
@@ -133,6 +144,7 @@
             font-weight: 400;
             margin-bottom: 60px;
             text-align: center;
+            width: 100%;
         }
 
         .founder-section {
@@ -519,17 +531,15 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <div class="brand-container">
-                        <div class="logo">
-                            <img src="logo.png" alt="ChemTutor+ Logo">
-                            <div class="logo-icon">🎓</div>
-                        </div>
+        <div class="header-top">
+            <div class="logo-section">
+                <div class="brand-container">
+                    <div class="logo">
+                        <img src="logo.png" alt="ChemTutor+ Logo">
+                        <div class="logo-icon">🎓</div>
                     </div>
-                    <h1 class="site-title">Chem Tutor Plus</h1>
                 </div>
+                <h1 class="site-title">Chem Tutor Plus</h1>
             </div>
         </div>
         <div class="header-nav">
