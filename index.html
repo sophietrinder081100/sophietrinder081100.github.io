@@ -50,11 +50,19 @@
             justify-content: center;
             border: 5px solid #4a7c59;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .logo-icon {
             font-size: 45px;
             color: #4a7c59;
+            display: none;
         }
 
         .logo-text {
@@ -78,6 +86,7 @@
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         nav a {
@@ -105,11 +114,22 @@
             padding: 60px 50px;
         }
 
+        .content h1 {
+            font-size: 42px;
+            color: #707070;
+            font-weight: 400;
+            margin-bottom: 60px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         h1 {
             font-size: 42px;
             color: #707070;
             font-weight: 400;
             margin-bottom: 60px;
+            text-align: center;
         }
 
         .founder-section {
@@ -499,6 +519,7 @@
         <div class="logo-section">
             <div class="brand-container">
                 <div class="logo">
+                    <img src="logo.png" alt="ChemTutor+ Logo">
                     <div class="logo-icon">🎓</div>
                 </div>
                 <div class="logo-text">ChemTutor+</div>
